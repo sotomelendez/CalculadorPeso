@@ -1,0 +1,24 @@
+<h1 align="center">Ideal Weight</h1>
+<table align="center">
+<%= form_for(:weight, url: weight_new_path) do |f| %>
+  <tr>
+    <td><%= f.label :height %><br></td>
+    <td><%= f.text_field :height %></td>
+    <td><%= f.select :units, options_for_select([['inch','inch'],['cm','cm']]) %></td>
+  </tr> 
+
+  <tr>
+    <td><%= f.label :genre %></td>
+    <td><%= f.select "genre", options_for_select([['Man','man'],['Woman','woman']]) %></td>
+  </tr>
+
+  <tr>
+    <td><%= f.label :formula %></td>
+    <td><%= f.select "formula", options_for_select([['Devine','devine'],['Robinson','robinson'],['Miller','miller']]) %></td>
+  </tr>
+
+  <tr>
+    <td><%= f.submit "Send" %></td>
+  </tr>
+<% end %>
+</table>

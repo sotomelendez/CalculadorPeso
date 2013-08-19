@@ -1,4 +1,10 @@
-CalculadorPeso::Application.routes.draw do
+Weightapp::Application.routes.draw do
+resources :weight
+#  get "welcome/index"
+#  root "welcome#index"
+  root "weight#index"
+  get "weight/index"
+  post "weight/new"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
